@@ -1,0 +1,20 @@
+*~
+plan/
+/target
+/target-*/
+/dist
+/corpus
+/log
+.DS_Store
+/.claude/
+/craft-fonts/
+packaging/env.sh
+/packaging/linux/flatpak/cargo-sources.json
+/build-flatpak/
+/.flatpak-builder/
+
+# lockfile kept out of public history (checksum lines trip leakscan hex pattern)
+/Cargo.lock
+
+/contributors/contributors.json
+/craft-i18n.rev

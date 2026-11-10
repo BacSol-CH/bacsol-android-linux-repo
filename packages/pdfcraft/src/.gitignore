@@ -1,0 +1,32 @@
+*~
+plan/
+/target
+/dist
+/corpus
+/log
+.DS_Store
+/fuzz-out
+/assets/models
+# A craft-fonts checkout used as the optional CRAFT_FONTS_DIR build input (CI and releases put it here).
+/craft-fonts
+.claude/
+
+# lockfile kept out of public history (checksum lines trip leakscan hex pattern)
+/Cargo.lock
+
+/vendor
+/contributors/contributors.json
+/craft-i18n.rev
+
+# Binary signing test fixture kept out of public history (PKCS#7 blob trips leakscan hex pattern).
+# Regenerate locally before running crates/sign integration tests:
+#   openssl req -x509 -newkey rsa:2048 ... ; see FETCH_TEST_FIXTURES.md
+crates/sign/tests/data/openssl-signed.pdf
+crates/sign/tests/data/x509-rsa-sha1.pdf
+
+# Synthetic PKCS#12 test keystores and the AcroForm sample PDF: binary fixtures are
+# kept out of public history (private keys never; binaries only with review). They stay
+# on disk as untracked fixtures so local tests keep working. Regenerate per
+# FETCH_TEST_FIXTURES.md before running the signing / UI test suites.
+crates/sign/tests/data/*.p12
+crates/ui-egui/tests/data/form.pdf

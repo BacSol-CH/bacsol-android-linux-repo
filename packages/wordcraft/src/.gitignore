@@ -1,0 +1,16 @@
+*~
+plan/
+/target
+/dist
+/corpus
+/log
+.DS_Store
+/.claude/
+/target-*/
+/craft-fonts/
+
+# lockfile kept out of public history (checksum lines trip leakscan hex pattern)
+/Cargo.lock
+
+/contributors/contributors.json
+/craft-i18n.rev
